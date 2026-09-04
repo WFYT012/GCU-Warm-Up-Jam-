@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Rendering;
+using UnityEngine.Video;
 
 //[RequireComponent(typeof(Animator))]
 public class CompletionManager : MonoBehaviour
@@ -15,6 +16,9 @@ public class CompletionManager : MonoBehaviour
     public float CompletionCameraZoom = 2.0f;
 
     public float CompletionHoldingDistance = 3.0f;
+
+    //public VideoClip handshakeClip;
+    public VideoPlayer videoPlayer;
 
     //[SerializeField] private AnimationClip CompletionZoomAnimation;
     //[SerializeField] private Animator animator;
@@ -103,6 +107,10 @@ public class CompletionManager : MonoBehaviour
         //{
         //    GameComplete = false;
         //}
+
+        //videoPlayer.enabled = true;
+
+        //VideoPlayer player = Instantiate<VideoPlayer>();
     }
 
 
