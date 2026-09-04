@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 public class CharacterScript : MonoBehaviour
 {
@@ -36,6 +37,17 @@ public class CharacterScript : MonoBehaviour
         if (jumpPressed && grounded)
         {
             rb.linearVelocityY = jumpStrength;
+            transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f)
+            .OnComplete(() => transform.DOScale(Vector3.one, 0.1f));
+
+        }
+        if (moveInput > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (moveInput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }
