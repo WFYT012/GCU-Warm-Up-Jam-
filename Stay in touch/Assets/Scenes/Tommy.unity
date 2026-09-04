@@ -268,9 +268,21 @@ PrefabInstance:
       propertyPath: isPlayer2
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1601426820156319424, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: jumpStrength
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1941632986484252027, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Name
-      value: Character
+      value: Character 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129122413794563072, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357142692659564809, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4669415434663406910, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Color.b
@@ -290,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9207963943856909422, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22534764
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9207963943856909422, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_LocalPosition.z
@@ -425,8 +437,8 @@ GameObject:
   - component: {fileID: 1970550394}
   - component: {fileID: 1970550393}
   - component: {fileID: 1970550392}
-  m_Layer: 0
-  m_Name: Square
+  m_Layer: 3
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,9 +595,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601426820156319424, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: jumpStrength
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1941632986484252027, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Name
       value: Character 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357142692659564809, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9207963943856909422, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_LocalPosition.x
@@ -639,5 +659,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 5704230024659384275}
-  - {fileID: 1970550395}
   - {fileID: 599808455}
+  - {fileID: 1970550395}

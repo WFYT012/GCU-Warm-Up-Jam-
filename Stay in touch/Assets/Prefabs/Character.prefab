@@ -103,12 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d1459a6153f6f46b4d98d69292fe56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1200
-  gravity: 1
+  moveSpeed: 5
   jumpStrength: 5
   isPlayer2: 0
   groundCheck: {fileID: 2129122413794563072}
-  floorLayerMask:
+  levelLayerMask:
     serializedVersion: 2
     m_Bits: 8
 --- !u!61 &7283083864471984366

@@ -4,11 +4,10 @@ using UnityEngine.InputSystem;
 public class CharacterScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float gravity;
     [SerializeField] private float jumpStrength;
     [SerializeField] private bool isPlayer2;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask floorLayerMask;
+    [SerializeField] private LayerMask levelLayerMask;
 
     private Rigidbody2D rb;
 
@@ -28,13 +27,12 @@ public class CharacterScript : MonoBehaviour
         bool jumpPressed = isPlayer2? Input.GetKey(KeyCode.UpArrow) : Input.GetKey(KeyCode.W);
 
         //-----movement-----
-        rb.linearVelocityX = moveInput * moveSpeed * Time.deltaTime;
+        rb.linearVelocityX = moveInput * moveSpeed;
+        bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.01f, levelLayerMask);
 
-        if (jumpPressed)
+        if (jumpPressed && grounded)
         {
-            bool grounded = Physics2D.CircleCast(groundCheck.position, 0.001f, Vector2.down, floorLayerMask);
-            if (grounded) rb.linearVelocityY = jumpStrength;
+            rb.linearVelocityY = jumpStrength;
         }
-            
     }
 }
