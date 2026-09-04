@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 5dd5b6f831dc5d34c87bfb6030d2f967
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 845604167274876776
+    second: LEVEL COMPLETE SPRITE_0
+  - first:
+      213: -1140009924121409706
+    second: LEVEL COMPLETE SPRITE_1
+  - first:
+      213: -8156552999748099989
+    second: LEVEL COMPLETE SPRITE_2
+  - first:
+      213: -2938840474611665894
+    second: LEVEL COMPLETE SPRITE_3
+  - first:
+      213: -5329384070207810946
+    second: LEVEL COMPLETE SPRITE_4
+  - first:
+      213: 7194629831444560260
+    second: LEVEL COMPLETE SPRITE_5
+  - first:
+      213: 8748898900427515498
+    second: LEVEL COMPLETE SPRITE_6
+  - first:
+      213: 4140857741010118334
+    second: LEVEL COMPLETE SPRITE_7
+  - first:
+      213: -2520429935116563438
+    second: LEVEL COMPLETE SPRITE_8
+  - first:
+      213: -133789408250254482
+    second: LEVEL COMPLETE SPRITE_9
+  - first:
+      213: -5829679264502598588
+    second: LEVEL COMPLETE SPRITE_10
+  - first:
+      213: -6102957506505015323
+    second: LEVEL COMPLETE SPRITE_11
+  - first:
+      213: -7138687208158202365
+    second: LEVEL COMPLETE SPRITE_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 10
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f420b82803cbb00800000000000000
+      internalID: 845604167274876776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 10
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657c258930fdd20f0800000000000000
+      internalID: -1140009924121409706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 23
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b602e52134a1ece80800000000000000
+      internalID: -8156552999748099989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 10
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a143b33b8242737d0800000000000000
+      internalID: -2938840474611665894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 23
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7253a7ac693a06b0800000000000000
+      internalID: -5329384070207810946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 10
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4897ea186b578d360800000000000000
+      internalID: 7194629831444560260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 23
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66a9cf32355a6970800000000000000
+      internalID: 8748898900427515498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 10
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6a55e1d28477930800000000000000
+      internalID: 4140857741010118334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 23
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ccd1ce352a50dd0800000000000000
+      internalID: -2520429935116563438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 10
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ba886fd3fa42ef0800000000000000
+      internalID: -133789408250254482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 23
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444bcdc8891d81fa0800000000000000
+      internalID: -5829679264502598588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_11
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 10
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eff6719b70fd4ba0800000000000000
+      internalID: -6102957506505015323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LEVEL COMPLETE SPRITE_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 10
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306fa1b7ec94eec90800000000000000
+      internalID: -7138687208158202365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LEVEL COMPLETE SPRITE_0: 845604167274876776
+      LEVEL COMPLETE SPRITE_1: -1140009924121409706
+      LEVEL COMPLETE SPRITE_10: -5829679264502598588
+      LEVEL COMPLETE SPRITE_11: -6102957506505015323
+      LEVEL COMPLETE SPRITE_12: -7138687208158202365
+      LEVEL COMPLETE SPRITE_2: -8156552999748099989
+      LEVEL COMPLETE SPRITE_3: -2938840474611665894
+      LEVEL COMPLETE SPRITE_4: -5329384070207810946
+      LEVEL COMPLETE SPRITE_5: 7194629831444560260
+      LEVEL COMPLETE SPRITE_6: 8748898900427515498
+      LEVEL COMPLETE SPRITE_7: 4140857741010118334
+      LEVEL COMPLETE SPRITE_8: -2520429935116563438
+      LEVEL COMPLETE SPRITE_9: -133789408250254482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
