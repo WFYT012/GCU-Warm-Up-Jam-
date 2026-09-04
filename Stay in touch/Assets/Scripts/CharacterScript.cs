@@ -8,6 +8,7 @@ public class CharacterScript : MonoBehaviour
     [SerializeField] private bool isPlayer2;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask levelLayerMask;
+    [SerializeField] private Animator animator;
 
     private Rigidbody2D rb;
 
@@ -28,6 +29,8 @@ public class CharacterScript : MonoBehaviour
 
         //-----movement-----
         rb.linearVelocityX = moveInput * moveSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
         bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.01f, levelLayerMask);
 
         if (jumpPressed && grounded)
