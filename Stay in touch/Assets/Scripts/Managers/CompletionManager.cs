@@ -69,7 +69,7 @@ public class CompletionManager : MonoBehaviour
 
                 completionTime = Time.time;
 
-                LevelCompleteText();
+                StartCoroutine(LevelCompleteText());
 
                 cameraStartPosition = transform.position;
                 cameraTargetPosition = Vector3.Lerp(Player1.position, Player2.position, 0.5f);
@@ -150,10 +150,11 @@ public class CompletionManager : MonoBehaviour
     //		graph.Destroy();
     //}
 
-    public void LevelCompleteText()
+    IEnumerator LevelCompleteText()
     {
+        yield return new WaitForSeconds(0.5f);
         completeSprite.SetActive(true);
-        completeSprite.transform.DOScale(new Vector3(3.6f, 3.9f, 1), 0.2f)
+        completeSprite.transform.DOScale(new Vector3(3.9f, 4.5f, 1), 0.15f)
             .OnComplete(() => completeSprite.transform.DOScale(Vector3.one *3, 0.1f));
     }
 }
