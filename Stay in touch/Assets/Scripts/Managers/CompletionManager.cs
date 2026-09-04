@@ -1,3 +1,4 @@
+using DG.Tweening;
 using NUnit.Framework.Internal.Filters;
 using System.Collections;
 using UnityEngine;
@@ -39,11 +40,14 @@ public class CompletionManager : MonoBehaviour
 
     private float completionTime;
 
+    public GameObject completeSprite;
+
     void Start()
 	{
         completionTImerCoroutine = StartCoroutine(CheckForCompletion());
 
-
+        completeSprite.transform.localScale = Vector3.zero;
+        completeSprite.SetActive(false);
         //CameraAnimator.clip = CompletionZoomAnimation;
     }
 
@@ -64,6 +68,8 @@ public class CompletionManager : MonoBehaviour
 				//animator.SetTrigger("OnCompletion");
 
                 completionTime = Time.time;
+
+                LevelCompleteText();
 
                 cameraStartPosition = transform.position;
                 cameraTargetPosition = Vector3.Lerp(Player1.position, Player2.position, 0.5f);
@@ -143,4 +149,12 @@ public class CompletionManager : MonoBehaviour
     //	if (graph.IsValid())
     //		graph.Destroy();
     //}
+
+    public void LevelCompleteText()
+    {
+        completeSprite.SetActive(true);
+        completeSprite.transform.DOScale(new Vector3(3.6f, 3.9f, 1), 0.2f)
+            .OnComplete(() => completeSprite.transform.DOScale(Vector3.one *3, 0.1f));
+    }
 }
+
