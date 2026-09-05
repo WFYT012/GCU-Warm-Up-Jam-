@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -370,6 +371,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a781ad7c0394e4988a4f9f3a9ac485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneCamera: {fileID: 519420031}
+  CameraTargetSize: 2
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186579736701138228, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.965926
+      value: 0.92387986
       objectReference: {fileID: 0}
     - target: {fileID: 2186579736701138228, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -764,7 +779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186579736701138228, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25881857
+      value: -0.3826828
       objectReference: {fileID: 0}
     - target: {fileID: 2186579736701138228, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -776,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186579736701138228, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 30
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 6470752864928279688, guid: 51aab1f6b0ba46b40b976552f58dc4c4, type: 3}
       propertyPath: m_Name

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using NUnit.Framework.Internal;
 
 public class CharacterScript : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class CharacterScript : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Animator animator;
     [SerializeField] private Transform sprite;
-    
+
     [Header("Runtime")]
     private Rigidbody2D rb;
     private bool onGround;
@@ -57,5 +58,11 @@ public class CharacterScript : MonoBehaviour
         //landing squash
         else if (onGround && !wasOnGround && Time.timeSinceLevelLoad > 0)
             sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "damage")
+            Camera.main.GetComponent<SceneReloadManager>().ReloadScene(gameObject, collision.gameObject.transform.position);
     }
 }
