@@ -1,15 +1,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum platformDirection
+{
+    horizontal,
+    vertical
+}
+
 public class MovingPlatformScript : MonoBehaviour
 {
-    [SerializeField] private bool vertical;
-    [SerializeField] private float speed;
+    [Header("Tunebale paramaters")]
+    [SerializeField] private platformDirection pd;
     [SerializeField] private float maxDistance;
+    [SerializeField] private float speed;
+
+    [Header("Runtime")]
+    private List<Transform> carrying = new List<Transform>();
+    private float distanceTravelled;
     private int direction = 1;
     private Rigidbody2D rb;
-    private float distanceTravelled;
-    private List<Transform> carrying = new List<Transform>();
     private Vector3 oldPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,20 +31,20 @@ public class MovingPlatformScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (vertical)
-            rb.linearVelocityY = speed * direction;
-        else
+        //horizontal movement
+        if (pd == platformDirection.horizontal)
         {
-            rb.linearVelocityX = speed * direction;
-
             foreach (Transform t in carrying)
-            {
                 t.transform.position = t.transform.position + (transform.position - oldPos);
-            }
 
+            rb.linearVelocityX = speed * direction;
             oldPos = transform.position;
         }
+        //vertical movement
+        else
+            rb.linearVelocityY = speed * direction;
 
+        //-----changing direction-----
         distanceTravelled += speed * Time.deltaTime;
 
         if (distanceTravelled >= maxDistance)
@@ -45,6 +54,7 @@ public class MovingPlatformScript : MonoBehaviour
         }
     }
 
+    //-----track which characters are being moved along-----
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")

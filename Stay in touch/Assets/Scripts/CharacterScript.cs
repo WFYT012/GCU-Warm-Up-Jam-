@@ -4,14 +4,20 @@ using DG.Tweening;
 
 public class CharacterScript : MonoBehaviour
 {
+    [Header("Tuneable parameters")]
+    [SerializeField] private bool isPlayer2;        //if is player 2, changes controls
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpStrength;
-    [SerializeField] private bool isPlayer2;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask levelLayerMask;
-    [SerializeField] private Animator animator;
 
+    [Header("References")]
+    [SerializeField] private LayerMask levelLayerMask;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform sprite;
+    
+    [Header("Runtime")]
     private Rigidbody2D rb;
+    private bool onGround;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,29 +31,34 @@ public class CharacterScript : MonoBehaviour
         //-----input-----
         int rightPressed = isPlayer2? (Input.GetKey(KeyCode.RightArrow)? 1 : 0) : (Input.GetKey(KeyCode.D)? 1 : 0);
         int leftPressed = isPlayer2? (Input.GetKey(KeyCode.LeftArrow)? 1 : 0) : (Input.GetKey(KeyCode.A)? 1 : 0);
-        int moveInput = rightPressed - leftPressed;
         bool jumpPressed = isPlayer2? Input.GetKey(KeyCode.UpArrow) : Input.GetKey(KeyCode.W);
+        int moveInput = rightPressed - leftPressed;
 
-        //-----movement-----
+        //-----horizontal movement-----
         rb.linearVelocityX = moveInput * moveSpeed;
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
-        bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.01f, levelLayerMask);
+        if (moveInput != 0)
+            transform.localScale = new Vector3(moveInput, 1,1);
 
-        if (jumpPressed && grounded)
+        //-----vertical movement
+        //ground check
+        bool wasOnGround = onGround;
+        onGround = (Physics2D.OverlapCircle(groundCheck.position, 0.01f, levelLayerMask));
+
+        //jumping
+        if (jumpPressed && onGround)
         {
             rb.linearVelocityY = jumpStrength;
-            transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f)
-            .OnComplete(() => transform.DOScale(Vector3.one, 0.1f));
 
+            //jump stretch
+            sprite.transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
         }
-        if (moveInput > 0)
+        //landing squash
+        else if (onGround && !wasOnGround && Time.timeSinceLevelLoad > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
         }
-        else if (moveInput < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+            
     }
 }
