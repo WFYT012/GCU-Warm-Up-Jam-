@@ -17,6 +17,11 @@ public class SceneReloadManager : MonoBehaviour
 
     public void ReloadScene(GameObject InPlayer, Vector3 TargetPosition)
     {
+        if (CameraMoving)
+        {
+            return;
+        }
+
         Player = InPlayer;
         CameraMoving = true;
         ReloadCalledTime = Time.time;
@@ -59,7 +64,15 @@ public class SceneReloadManager : MonoBehaviour
         transform.eulerAngles = new Vector3(0.0f, 0.0f, Mathf.Lerp(0, -10.0f, progress));
         transform.position = Vector3.Lerp(CameraStartPosition, CameraTargetPosition, progress);
 
-        Player.transform.position = Vector3.Lerp(PlayerStartPosition, PlayerTargetPosition, progress);
+        float deathTime = Time.time - ReloadCalledTime - 1.25f;
+        float deathProgress = EaseInOutQuint(deathTime);
+
+        Player.transform.position = Vector3.Lerp(PlayerStartPosition, PlayerTargetPosition, progress) + new Vector3 (Mathf.Clamp(deathTime, 0.0f, 1.0f) * 3, Mathf.Sin(Mathf.PI * Mathf.Clamp(deathTime, 0.0f, 1.0f)) * 2, 0.0f);
+        if (deathTime < 0)
+        {
+            Player.transform.position += new Vector3(Random.Range(0, time / 5), Random.Range(0, time / 5));
+        }
+        Player.transform.eulerAngles = new Vector3(0.0f, 0.0f, Mathf.Clamp(deathTime, 0.0f, 1.0f) * 720.0f);
 
         if (time >= 3.0f)
         {

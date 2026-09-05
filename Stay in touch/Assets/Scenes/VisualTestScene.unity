@@ -3589,6 +3589,7 @@ MonoBehaviour:
   CompletionCameraZoom: 2.5
   CompletionHoldingDistance: 3
   videoPlayer: {fileID: 448200490}
+  reloadManager: {fileID: 1347188814}
   completeSprite: {fileID: 999453565}
 --- !u!114 &1347188814
 MonoBehaviour:
@@ -3603,7 +3604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneCamera: {fileID: 1347188810}
-  CameraTargetSize: 1.5
+  CameraTargetSize: 2
 --- !u!1001 &1416796760
 PrefabInstance:
   m_ObjectHideFlags: 0

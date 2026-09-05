@@ -40,6 +40,8 @@ public class CompletionManager : MonoBehaviour
 
     private float completionTime;
 
+    [SerializeField] private SceneReloadManager reloadManager;
+
     public GameObject completeSprite;
 
     void Start()
@@ -70,6 +72,8 @@ public class CompletionManager : MonoBehaviour
                 completionTime = Time.time;
 
                 StartCoroutine(LevelCompleteText());
+
+                reloadManager.enabled = false;
 
                 cameraStartPosition = transform.position;
                 cameraTargetPosition = Vector3.Lerp(Player1.position, Player2.position, 0.5f);
