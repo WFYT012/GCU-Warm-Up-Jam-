@@ -56,9 +56,6 @@ public class CharacterScript : MonoBehaviour
         }
         //landing squash
         else if (onGround && !wasOnGround && Time.timeSinceLevelLoad > 0)
-        {
             sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
-        }
-            
     }
 }
