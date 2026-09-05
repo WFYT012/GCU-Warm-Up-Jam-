@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1601426820156319424}
   - component: {fileID: 7283083864471984366}
   - component: {fileID: 3357142692659564809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   jumpStrength: 10
   levelLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   groundCheck: {fileID: 2129122413794563072}
   animator: {fileID: 1586424451074445177}
   sprite: {fileID: 5392517007612878825}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129122413794563072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 5392517007612878825}
   - component: {fileID: 2920444864669325169}
   - component: {fileID: 1586424451074445177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

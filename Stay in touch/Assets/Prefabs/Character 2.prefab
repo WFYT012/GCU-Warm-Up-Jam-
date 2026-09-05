@@ -20,14 +20,30 @@ PrefabInstance:
       propertyPath: isPlayer2
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1601426820156319424, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: levelLayerMask.m_Bits
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 1941632986484252027, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Name
-      value: Character 2 Variant
+      value: Character 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941632986484252027, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950971170520279365, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2920444864669325169, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9c72cac8973b46d4f812e42c3af51d46, type: 3}
+    - target: {fileID: 3928129266239437875, guid: df95e235f48b6c74091a71ad01859375, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4669415434663406910, guid: df95e235f48b6c74091a71ad01859375, type: 3}
       propertyPath: m_Sprite
       value: 
