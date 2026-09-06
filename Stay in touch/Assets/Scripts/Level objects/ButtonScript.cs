@@ -25,10 +25,12 @@ public class ButtonScript : MonoBehaviour
             else
                 linkedObject.SetActive(!linkedObject.activeSelf);
         }
-            
+
 
         if (type == buttonType.button)
             Destroy(gameObject);
+        else if (type == buttonType.lever)
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     //button de-press
