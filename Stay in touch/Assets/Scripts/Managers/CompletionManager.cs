@@ -27,7 +27,8 @@ public class CompletionManager : MonoBehaviour
     //private PlayableGraph graph;
 
     private Coroutine completionTImerCoroutine;
-	private bool GameComplete = false;
+    private bool GameComplete = false;
+    private bool VideoPlaying = false;
 
     private Vector3 cameraStartPosition;
     private Vector3 cameraTargetPosition;
@@ -40,6 +41,7 @@ public class CompletionManager : MonoBehaviour
 
     private float completionTime;
 
+    //[SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private SceneReloadManager reloadManager;
 
     public GameObject completeSprite;
@@ -117,8 +119,14 @@ public class CompletionManager : MonoBehaviour
         //{
         //    GameComplete = false;
         //}
+        if (!VideoPlaying && time > 0.8f)
+        {
+            VideoPlaying = true;
+            videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
 
-        //videoPlayer.enabled = true;
+            videoPlayer.enabled = true;
+            videoPlayer.Play();
+        }
 
         //VideoPlayer player = Instantiate<VideoPlayer>();
     }
