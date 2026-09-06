@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using DG.Tweening;
-using NUnit.Framework.Internal;
 
 public class CharacterScript : MonoBehaviour
 {
@@ -53,11 +51,11 @@ public class CharacterScript : MonoBehaviour
             rb.linearVelocityY = jumpStrength;
 
             //jump stretch
-            sprite.transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
+            sprite.transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(Vector3.one, 0.1f));
         }
         //landing squash
         else if (onGround && !wasOnGround && Time.timeSinceLevelLoad > 0)
-            sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(new Vector3(1, 1, 1), 0.1f));
+            sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(Vector3.one, 0.1f));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
