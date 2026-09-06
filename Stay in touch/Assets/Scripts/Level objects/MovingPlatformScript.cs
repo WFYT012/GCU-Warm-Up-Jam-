@@ -13,6 +13,7 @@ public class MovingPlatformScript : MonoBehaviour
     [SerializeField] private platformDirection pd;
     [SerializeField] private float maxDistance;
     [SerializeField] private float speed;
+    public bool isActive;
 
     [Header("Runtime")]
     private List<Transform> carrying = new List<Transform>();
@@ -20,6 +21,7 @@ public class MovingPlatformScript : MonoBehaviour
     private int direction = 1;
     private Rigidbody2D rb;
     private Vector3 oldPos;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,27 +33,32 @@ public class MovingPlatformScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //horizontal movement
-        if (pd == platformDirection.horizontal)
+        if (isActive)
         {
-            foreach (Transform t in carrying)
-                t.transform.position = t.transform.position + (transform.position - oldPos);
+            //horizontal movement
+            if (pd == platformDirection.horizontal)
+            {
+                foreach (Transform t in carrying)
+                    t.transform.position = t.transform.position + (transform.position - oldPos);
 
-            rb.linearVelocityX = speed * direction;
-            oldPos = transform.position;
+                rb.linearVelocityX = speed * direction;
+                oldPos = transform.position;
+            }
+            //vertical movement
+            else
+                rb.linearVelocityY = speed * direction;
+
+            //-----changing direction-----
+            distanceTravelled += speed * Time.deltaTime;
+
+            if (distanceTravelled >= maxDistance)
+            {
+                direction *= -1;
+                distanceTravelled = -(distanceTravelled - maxDistance);
+            }
         }
-        //vertical movement
         else
-            rb.linearVelocityY = speed * direction;
-
-        //-----changing direction-----
-        distanceTravelled += speed * Time.deltaTime;
-
-        if (distanceTravelled >= maxDistance)
-        {
-            direction *= -1;
-            distanceTravelled = -(distanceTravelled - maxDistance);
-        }
+            rb.linearVelocity = Vector2.zero;
     }
 
     //-----track which characters are being moved along-----
