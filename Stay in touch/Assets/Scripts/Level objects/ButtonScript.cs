@@ -17,7 +17,15 @@ public class ButtonScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         foreach (GameObject linkedObject in linkedObjects)
-            linkedObject.SetActive(!linkedObject.activeSelf);
+        {
+            MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
+
+            if (mps != null)
+                mps.isActive = !mps.isActive;
+            else
+                linkedObject.SetActive(!linkedObject.activeSelf);
+        }
+            
 
         if (type == buttonType.button)
             Destroy(gameObject);
@@ -29,7 +37,14 @@ public class ButtonScript : MonoBehaviour
         if (type == buttonType.pressurePlate)
         {
             foreach (GameObject linkedObject in linkedObjects)
-            linkedObject.SetActive(!linkedObject.activeSelf);
+            {
+                MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
+
+                if (mps != null)
+                    mps.isActive = !mps.isActive;
+                else
+                    linkedObject.SetActive(!linkedObject.activeSelf);
+            }
         }   
     }
 }
