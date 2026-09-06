@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer2: 0
   moveSpeed: 6.8
-  jumpStrength: 10
+  jumpStrength: 12.5
   levelLayerMask:
     serializedVersion: 2
     m_Bits: 136

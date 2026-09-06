@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 //[RequireComponent(typeof(Animator))]
@@ -46,6 +47,8 @@ public class CompletionManager : MonoBehaviour
 
     public GameObject completeSprite;
 
+    public Animator animator;
+
     void Start()
 	{
         completionTImerCoroutine = StartCoroutine(CheckForCompletion());
@@ -73,7 +76,7 @@ public class CompletionManager : MonoBehaviour
 
                 completionTime = Time.time;
 
-                StartCoroutine(LevelCompleteText());
+                StartCoroutine(LevelComplete());
 
                 reloadManager.enabled = false;
 
@@ -162,12 +165,14 @@ public class CompletionManager : MonoBehaviour
     //		graph.Destroy();
     //}
 
-    IEnumerator LevelCompleteText()
+    IEnumerator LevelComplete()
     {
         yield return new WaitForSeconds(0.5f);
         completeSprite.SetActive(true);
         completeSprite.transform.DOScale(new Vector3(3.9f, 4.5f, 1), 0.15f)
             .OnComplete(() => completeSprite.transform.DOScale(Vector3.one *3, 0.1f));
+        yield return new WaitForSeconds(1);
+        animator.SetTrigger("SwipeLeft");
     }
 }
 
