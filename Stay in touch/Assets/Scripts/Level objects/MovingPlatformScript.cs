@@ -17,22 +17,37 @@ public class MovingPlatformScript : MonoBehaviour
 
     [Header("Runtime")]
     private List<Transform> carrying = new List<Transform>();
-    private float distanceTravelled;
-    private int direction = 1;
+    private int goalDirection = 1;
+    private float direction = 1;
     private Rigidbody2D rb;
     private Vector3 oldPos;
-    
+    private float startPos;
+    private float goalPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         oldPos = transform.position;
+
+        if (pd == platformDirection.horizontal)
+        {
+            startPos = transform.position.x;
+            goalPos = transform.position.x + maxDistance;
+        }
+        else
+        {
+            startPos = transform.position.x;
+            goalPos = transform.position.x + maxDistance;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        direction = Mathf.Lerp(direction, goalDirection, 1 * Time.deltaTime);
+
         if (isActive)
         {
             //horizontal movement
@@ -49,12 +64,15 @@ public class MovingPlatformScript : MonoBehaviour
                 rb.linearVelocityY = speed * direction;
 
             //-----changing direction-----
-            distanceTravelled += speed * Time.deltaTime;
-
-            if (distanceTravelled >= maxDistance)
+            if (pd == platformDirection.horizontal)
             {
-                direction *= -1;
-                distanceTravelled = -(distanceTravelled - maxDistance);
+                if ((goalDirection == 1 && transform.position.x >= goalPos) || (goalDirection == -1 && transform.position.x <= startPos))
+                    goalDirection *= -1;
+            }
+            else
+            {
+                if ((goalDirection == 1 && transform.position.y >= goalPos) || (goalDirection == -1 && transform.position.y <= startPos))
+                    goalDirection *= -1;
             }
         }
         else
