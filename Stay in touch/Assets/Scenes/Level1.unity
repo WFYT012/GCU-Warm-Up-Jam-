@@ -3314,7 +3314,6 @@ MonoBehaviour:
   reloadManager: {fileID: 1347188814}
   completeSprite: {fileID: 999453565}
   animator: {fileID: 1626557061}
-  nextLevelName: 
 --- !u!114 &1347188814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3642,7 +3641,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659785524}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 77c4ee0816406504e81e4a0958029a8b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7b43a3a42f78bad44bd2d3094a2972c6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
