@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 enum buttonType
 {
@@ -13,6 +14,9 @@ public class ButtonScript : MonoBehaviour
     [SerializeField] private GameObject[] linkedObjects;    //which objects the button affects
     [SerializeField] private buttonType type;               //button is one use only. lever can be used multiple times. pressure plate requires contact
 
+    [Header("References")]
+    [SerializeField] private AudioResource sound;
+
     //buytton press
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,6 +30,7 @@ public class ButtonScript : MonoBehaviour
                 linkedObject.SetActive(!linkedObject.activeSelf);
         }
 
+        SoundManagerScript.instance.PlaySoundClip(sound);
 
         if (type == buttonType.button)
             Destroy(gameObject);
@@ -47,6 +52,8 @@ public class ButtonScript : MonoBehaviour
                 else
                     linkedObject.SetActive(!linkedObject.activeSelf);
             }
+
+            SoundManagerScript.instance.PlaySoundClip(sound);
         }   
     }
 }

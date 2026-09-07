@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedObjects: []
   type: 0
+  sound: {fileID: 8300000, guid: cdd6872ae693f6648b9b865e6f24df81, type: 3}

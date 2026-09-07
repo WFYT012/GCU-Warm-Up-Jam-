@@ -1,6 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.U2D;
+using UnityEngine.Audio;
 
 public class ProjectileLauncherScript : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class ProjectileLauncherScript : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform sprite;
+    [SerializeField] private AudioResource sound;
 
     [Header("Runtime")]
     private float fireTime;
@@ -38,5 +39,6 @@ public class ProjectileLauncherScript : MonoBehaviour
         GameObject p = Instantiate(projectile, firePoint.transform.position, transform.rotation);
         p.GetComponent<Rigidbody2D>().linearVelocity = p.transform.right * fireSpeed;
         sprite.transform.DOScale(new Vector3(0.66f, 1.33f, 1f), 0.15f).OnComplete(() => sprite.transform.DOScale(Vector3.one, 0.3f));
+        SoundManagerScript.instance.PlaySoundClip(sound);
     }
 }

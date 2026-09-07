@@ -97,6 +97,7 @@ MonoBehaviour:
   projectile: {fileID: 3300974671748334306, guid: a33d928718be8f64d828ec0c79b495cd, type: 3}
   firePoint: {fileID: 4794588751902490346}
   sprite: {fileID: 3245153258932564232}
+  sound: {fileID: 8300000, guid: 00d0d8f6f7dc4fe4d94d28c1e2adc0fa, type: 3}
 --- !u!1 &8948113300931237927
 GameObject:
   m_ObjectHideFlags: 0
