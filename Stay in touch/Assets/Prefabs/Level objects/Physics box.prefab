@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7774905775109533252}
   - component: {fileID: 7161881260310848166}
   - component: {fileID: 5150939769613348232}
+  - component: {fileID: 8454341572177740279}
   m_Layer: 3
   m_Name: Physics box
   m_TagString: Untagged
@@ -162,3 +163,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8454341572177740279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068721331337560992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a8dcdace5503849ad4d0dcf931a8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceBeforeRespawn: 20
