@@ -51,6 +51,7 @@ MonoBehaviour:
   isPlayer2: 0
   moveSpeed: 6.8
   jumpStrength: 12.5
+  airDecelleration: 5
   levelLayerMask:
     serializedVersion: 2
     m_Bits: 136

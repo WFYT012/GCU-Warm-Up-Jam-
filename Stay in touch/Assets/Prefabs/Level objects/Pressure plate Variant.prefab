@@ -17,8 +17,12 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4122557784938554228, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
+      propertyPath: m_Offset.y
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122557784938554228, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4122557784938554228, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8000001
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.z

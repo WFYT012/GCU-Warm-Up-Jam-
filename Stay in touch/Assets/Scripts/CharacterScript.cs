@@ -7,6 +7,7 @@ public class CharacterScript : MonoBehaviour
     [SerializeField] private bool isPlayer2;        //if is player 2, changes controls
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpStrength;
+    [SerializeField] private float airDecelleration;
 
     [Header("References")]
     [SerializeField] private LayerMask levelLayerMask;
@@ -33,13 +34,6 @@ public class CharacterScript : MonoBehaviour
         bool jumpPressed = isPlayer2? Input.GetKey(KeyCode.UpArrow) : Input.GetKey(KeyCode.W);
         int moveInput = rightPressed - leftPressed;
 
-        //-----horizontal movement-----
-        rb.linearVelocityX = moveInput * moveSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
-
-        if (moveInput != 0)
-            transform.localScale = new Vector3(moveInput, 1,1);
-
         //-----vertical movement
         //ground check
         bool wasOnGround = onGround;
@@ -56,6 +50,17 @@ public class CharacterScript : MonoBehaviour
         //landing squash
         else if (onGround && !wasOnGround && Time.timeSinceLevelLoad > 0)
             sprite.transform.DOScale(new Vector3(1.6f, 0.8f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(Vector3.one, 0.1f));
+
+        //-----horizontal movement-----
+        if (onGround || moveInput != 0)
+            rb.linearVelocityX = moveInput * moveSpeed;
+        else
+            rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, 0, airDecelleration * Time.deltaTime);
+
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
+        if (moveInput != 0)
+            transform.localScale = new Vector3(moveInput, 1, 1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
