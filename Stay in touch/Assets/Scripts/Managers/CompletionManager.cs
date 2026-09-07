@@ -67,7 +67,7 @@ public class CompletionManager : MonoBehaviour
 			float distance = Vector3.Distance(Player1.position, Player2.position);
 			//Debug.Log("Distance: " + distance);
 
-			if (distance <= CompletionDistance)
+			if (distance <= CompletionDistance && !reloadManager.CameraMoving)
 			{
 				Debug.Log("Game Completion Triggered");
 				GameComplete = true;

@@ -7,7 +7,7 @@ public class SceneReloadManager : MonoBehaviour
     private float InitialCameraZoom;
     public float CameraTargetSize = 2.0f;
 
-    private bool CameraMoving = false;
+    public bool CameraMoving = false;
     private Vector3 CameraStartPosition;
     private Vector3 CameraTargetPosition;
     private GameObject Player;
