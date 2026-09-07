@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6f14f2eb8d8865841a352f7dfc314086
+guid: b5a53605849ef6f458282f476ff3311d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -368718826349097156
-    second: pressurePlate_0
+      213: -6231044458718751821
+    second: circle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,10 +49,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0.25}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 8
-  spriteBorder: {x: 0, y: 0, z: 0, w: 4}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pressurePlate_0
+      name: circle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 8
-        height: 5
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3f86755e2c02eaf0800000000000000
-      internalID: -368718826349097156
+      spriteID: 3b3176a0412e689a0800000000000000
+      internalID: -6231044458718751821
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pressurePlate_0: -368718826349097156
+      circle_0: -6231044458718751821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

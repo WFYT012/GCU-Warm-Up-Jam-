@@ -501,6 +501,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4122557784938554228, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.375
+      objectReference: {fileID: 0}
     - target: {fileID: 4719290026977563680, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: linkedObjects.Array.size
       value: 1
@@ -527,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -864,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412233548457421973, guid: 3915f7def214a49448f415780e998d91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1412233548457421973, guid: 3915f7def214a49448f415780e998d91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -902,6 +906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 9005557985050601971, guid: 3915f7def214a49448f415780e998d91, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -915,6 +923,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1118040935911742763, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6675495168835834364, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
       propertyPath: m_Name
       value: Pressure plate
@@ -925,7 +937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8000001
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
       propertyPath: m_LocalPosition.z
