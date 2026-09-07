@@ -25,7 +25,7 @@ public class PortalScript : MonoBehaviour
             rb.position = (otherPortal.transform.position + newPosDiff);
 
             //rotate velocity based on angle and scale
-            rb.linearVelocity = Quaternion.Euler(transform.rotation.eulerAngles) * rb.linearVelocity;
+            rb.linearVelocity = Quaternion.Euler(otherPortal.transform.rotation.eulerAngles - transform.rotation.eulerAngles) * rb.linearVelocity * -1;
             rb.linearVelocityX *= otherPortal.transform.localScale.x / transform.localScale.x;
         }
     }
