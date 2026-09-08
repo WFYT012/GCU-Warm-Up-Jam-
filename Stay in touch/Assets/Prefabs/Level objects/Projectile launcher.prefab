@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFireTime: 5
+  initialFireTime: 1
   fireSpeed: 12
   projectile: {fileID: 3300974671748334306, guid: a33d928718be8f64d828ec0c79b495cd, type: 3}
   firePoint: {fileID: 4794588751902490346}

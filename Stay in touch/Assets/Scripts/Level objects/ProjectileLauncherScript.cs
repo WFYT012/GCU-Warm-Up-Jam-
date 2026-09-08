@@ -6,6 +6,7 @@ public class ProjectileLauncherScript : MonoBehaviour
 {
     [Header("Tuneable parameters")]
     [SerializeField] private float maxFireTime;
+    [SerializeField] private float initialFireTime;
     [SerializeField] private float fireSpeed;
 
     [Header("References")]
@@ -19,17 +20,17 @@ public class ProjectileLauncherScript : MonoBehaviour
 
     private void Start()
     {
-        fireTime = maxFireTime - 1;
+        fireTime = initialFireTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        fireTime += Time.deltaTime;
+        fireTime -= Time.deltaTime;
 
-        if (fireTime >= maxFireTime)
+        if (fireTime <= 0)
         {
-            fireTime -= maxFireTime;
+            fireTime += maxFireTime;
             sprite.transform.DOScale(new Vector3(0.33f, 2f, 1f), 0.4f).OnComplete(() => sprite.transform.DOScale(new Vector3(1.5f, 0.5f, 1), 0.1f).OnComplete(() => Fire()));
         }
     }
