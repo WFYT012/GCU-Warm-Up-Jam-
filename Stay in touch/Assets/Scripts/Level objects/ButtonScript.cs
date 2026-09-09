@@ -30,6 +30,7 @@ public class ButtonScript : MonoBehaviour
                 linkedObject.SetActive(!linkedObject.activeSelf);
         }
 
+        
         SoundManagerScript.instance.PlaySoundClip(sound);
 
         if (type == buttonType.button)

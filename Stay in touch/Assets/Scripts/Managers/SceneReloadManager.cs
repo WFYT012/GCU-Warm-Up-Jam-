@@ -77,6 +77,7 @@ public class SceneReloadManager : MonoBehaviour
         if (time >= 3.0f)
         {
             //This is where the reload starts, should animate then be called
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

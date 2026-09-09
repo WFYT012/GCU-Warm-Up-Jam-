@@ -9,6 +9,8 @@ public class MenuButtonsScript : MonoBehaviour
     public GameObject creditsButton;
     public GameObject quitButton;
 
+    public DeathTransition dt;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +25,7 @@ public class MenuButtonsScript : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneManager.LoadScene("Level1");
+        dt.Death();
         
     }
     public void StopButton()
