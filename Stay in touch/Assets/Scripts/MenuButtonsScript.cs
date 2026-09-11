@@ -26,7 +26,7 @@ public class MenuButtonsScript : MonoBehaviour
     public void PlayButton()
     {
         dt.Death();
-        
+        MusicManagerScript.instance.FadeTrack();
     }
     public void StopButton()
     {
