@@ -2,6 +2,7 @@ using DG.Tweening;
 using NUnit.Framework.Internal.Filters;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Playables;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -30,6 +31,7 @@ public class CompletionManager : MonoBehaviour
     private Coroutine completionTImerCoroutine;
     private bool GameComplete = false;
     private bool VideoPlaying = false;
+    private bool AudioPlaying = false;
 
     private Vector3 cameraStartPosition;
     private Vector3 cameraTargetPosition;
@@ -41,6 +43,8 @@ public class CompletionManager : MonoBehaviour
     private Vector3 player2TargetPosition;
 
     private float completionTime;
+
+    public AudioResource winningSound;
 
     //[SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private SceneReloadManager reloadManager;
@@ -114,6 +118,7 @@ public class CompletionManager : MonoBehaviour
         float time = Time.time - completionTime;
         float progress = EaseInOutQuint(time);
 
+
         Debug.Log("Progress: " + progress);
 
         SceneCamera.orthographicSize = Mathf.Lerp(InitialCameraZoom, CompletionCameraZoom, progress);
@@ -127,13 +132,18 @@ public class CompletionManager : MonoBehaviour
         //{
         //    GameComplete = false;
         //}
+        if (!AudioPlaying && time > 0.5f)
+        {
+            AudioPlaying = true;
+            SoundManagerScript.instance.PlaySoundClip(winningSound);
+        }
         if (!VideoPlaying && time > 0.8f)
         {
-            VideoPlaying = true;
-            videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
+        VideoPlaying = true;
+        videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
 
-            videoPlayer.enabled = true;
-            videoPlayer.Play();
+        videoPlayer.enabled = true;
+        videoPlayer.Play();
         }
 
         //VideoPlayer player = Instantiate<VideoPlayer>();
