@@ -518,6 +518,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 255607746}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6092443251268383544, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_Name
       value: BorderUIPrefab
@@ -1049,9 +1073,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 255607747}
+  - {fileID: 455741204}
   - {fileID: 1285936598}
   - {fileID: 547088735}
-  - {fileID: 663346559}
   - {fileID: 1224567939}
+  - {fileID: 663346559}
   - {fileID: 217245939}
-  - {fileID: 455741204}

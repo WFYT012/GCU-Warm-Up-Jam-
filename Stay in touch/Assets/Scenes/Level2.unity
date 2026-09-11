@@ -11802,6 +11802,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1347188810}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360348841141644464, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274571114231472095, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6092443251268383544, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_Name
       value: BorderUIPrefab
