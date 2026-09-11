@@ -67,12 +67,15 @@ public class ButtonScript : MonoBehaviour
         {
             foreach (GameObject linkedObject in linkedObjects)
             {
-                MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
+                if (linkedObject != null)
+                {
+                    MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
 
-                if (mps != null)
-                    mps.isActive = !mps.isActive;
-                else
-                    linkedObject.SetActive(!linkedObject.activeSelf);
+                    if (mps != null)
+                        mps.isActive = !mps.isActive;
+                    else
+                        linkedObject.SetActive(!linkedObject.activeSelf);
+                }
             }
 
             SoundManagerScript.instance.PlaySoundClip(sound);
