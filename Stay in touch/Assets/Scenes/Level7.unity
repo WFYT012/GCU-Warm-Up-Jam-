@@ -1200,6 +1200,10 @@ PrefabInstance:
       propertyPath: 'linkedObjects.Array.data[3]'
       value: 
       objectReference: {fileID: 1023500542}
+    - target: {fileID: 5031284419410967211, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f14f2eb8d8865841a352f7dfc314086, type: 3}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -8827,7 +8831,7 @@ PrefabInstance:
       objectReference: {fileID: 1392958931}
     - target: {fileID: 7192489860530481, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: nextLevelName
-      value: Level8
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 819421212710465171, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_IsActive
