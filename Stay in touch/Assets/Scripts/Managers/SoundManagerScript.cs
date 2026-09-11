@@ -8,14 +8,25 @@ public class SoundManagerScript : MonoBehaviour
 
     private void Awake()
     {
+
         if (instance == null)
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     //-----variables-----
 
     [Header("References")]
     [SerializeField] private AudioSource soundObject;
+
+    [Header("Music")]
+    [SerializeField] private AudioSource musicSource;
 
     //-----behaviour-----
 
@@ -32,4 +43,12 @@ public class SoundManagerScript : MonoBehaviour
         audioSource.Play();
         Destroy(audioSource.gameObject, clipLength * Time.timeScale);
     }
+
+    public void PlayMusic(AudioClip track, float volume = 1f)
+    {
+        musicSource.clip = track;
+        musicSource.volume = volume;
+        musicSource.Play();
+    }
+
 }
