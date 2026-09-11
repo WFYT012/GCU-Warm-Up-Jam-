@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: f134f20dff5cf1c438176f0b9953de57
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SceneCamera: {instanceID: 0}
+  - Player1: {instanceID: 0}
+  - Player2: {instanceID: 0}
+  - videoPlayer: {instanceID: 0}
+  - winningSound: {fileID: 8300000, guid: 6b1a6b8148164714abce1aaaff057391, type: 3}
+  - reloadManager: {instanceID: 0}
+  - completeSprite: {instanceID: 0}
+  - animator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
