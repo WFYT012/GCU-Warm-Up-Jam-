@@ -3,7 +3,7 @@ using UnityEngine;
 public class CharacterLauncherScript : MonoBehaviour
 {
     public GameObject launchable;
-    public float timer = 0;
+    private float timer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +15,7 @@ public class CharacterLauncherScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 5)
+        if(timer > 2)
         {
             timer = 0;
             GameObject obj = Instantiate(launchable, transform.position, Quaternion.identity);

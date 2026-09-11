@@ -33,6 +33,6 @@ public class SoundManagerScript : MonoBehaviour
 
         //play sound & then destroy object
         audioSource.Play();
-        Destroy(audioSource.gameObject, clipLength * Time.timeScale);
+        Destroy(audioSource.gameObject, clipLength);
     }
 }
