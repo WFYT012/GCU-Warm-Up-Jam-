@@ -18,6 +18,7 @@ public class SceneTransitionScript : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(nextLevelName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        //SceneManager.LoadScene(nextLevelName);
     }
 }
