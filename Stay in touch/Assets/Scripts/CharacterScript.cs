@@ -1,5 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Audio;
+using System.Collections;
 
 public interface IPlayer
 {
@@ -24,6 +26,13 @@ public class CharacterScript : MonoBehaviour, IPlayer
     private Rigidbody2D rb;
     private bool onGround;
 
+    [Header("Sounds")]
+    [SerializeField] AudioResource jumpSound;
+    [SerializeField] AudioResource deathSound;
+
+    private bool isDead = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,7 +45,7 @@ public class CharacterScript : MonoBehaviour, IPlayer
         //-----input-----
         int rightPressed = isPlayer2? (Input.GetKey(KeyCode.RightArrow)? 1 : 0) : (Input.GetKey(KeyCode.D)? 1 : 0);
         int leftPressed = isPlayer2? (Input.GetKey(KeyCode.LeftArrow)? 1 : 0) : (Input.GetKey(KeyCode.A)? 1 : 0);
-        bool jumpPressed = isPlayer2? Input.GetKey(KeyCode.UpArrow) : Input.GetKey(KeyCode.W);
+        bool jumpPressed = isPlayer2? Input.GetKeyDown(KeyCode.UpArrow) : Input.GetKeyDown(KeyCode.W);
         int moveInput = rightPressed - leftPressed;
 
         //-----vertical movement
@@ -48,6 +57,7 @@ public class CharacterScript : MonoBehaviour, IPlayer
         if (jumpPressed && onGround)
         {
             rb.linearVelocityY = jumpStrength;
+            SoundManagerScript.instance.PlaySoundClip(jumpSound, 0.5f, 0.5f);
 
             //jump stretch
             sprite.transform.DOScale(new Vector3(0.8f, 1.6f, 1f), 0.1f).OnComplete(() => sprite.transform.DOScale(Vector3.one, 0.1f));
@@ -70,7 +80,17 @@ public class CharacterScript : MonoBehaviour, IPlayer
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "damage")
+        if (collision.gameObject.tag == "damage" && !isDead)
+        {
+            isDead = true;
+            StartCoroutine(DeathSound());
             Camera.main.GetComponent<SceneReloadManager>().ReloadScene(gameObject, collision.gameObject.transform.position);
+        }
+            
+    }
+    IEnumerator DeathSound()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SoundManagerScript.instance.PlaySoundClip(deathSound);
     }
 }

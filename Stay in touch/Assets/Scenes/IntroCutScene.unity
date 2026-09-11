@@ -781,7 +781,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "The passion of love can bring two \nstar crossed lovers together \nthrough
-    even the most turbulent of times\n\nAll they need to do...\nis TOUCH EACH OTHER"
+    even the most turbulent of times\n\nAll they need to do is...\nTOUCH EACH OTHER"
 --- !u!222 &745411327
 CanvasRenderer:
   m_ObjectHideFlags: 0
