@@ -1,7 +1,12 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class CharacterScript : MonoBehaviour
+public interface IPlayer
+{
+
+}
+
+public class CharacterScript : MonoBehaviour, IPlayer
 {
     [Header("Tuneable parameters")]
     [SerializeField] private bool isPlayer2;        //if is player 2, changes controls

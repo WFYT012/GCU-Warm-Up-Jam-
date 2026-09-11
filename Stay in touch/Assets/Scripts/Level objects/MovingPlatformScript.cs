@@ -7,7 +7,7 @@ enum platformDirection
     vertical
 }
 
-public class MovingPlatformScript : MonoBehaviour
+public class MovingPlatformScript : MonoBehaviour, ITriggered
 {
     [Header("Tunebale paramaters")]
     [SerializeField] private platformDirection pd;
@@ -90,5 +90,14 @@ public class MovingPlatformScript : MonoBehaviour
     {
         if (collision.tag == "Player")
             carrying.Remove(collision.transform);
+    }
+
+    public void OnTriggered(string Context)
+    {
+        if (Context == "Toggle")
+        {
+            isActive = !isActive;
+        }
+        //throw new System.NotImplementedException();
     }
 }

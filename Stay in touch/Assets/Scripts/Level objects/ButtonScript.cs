@@ -8,6 +8,11 @@ enum buttonType
     pressurePlate
 }
 
+public interface ITriggered
+{
+    void OnTriggered(string Context);
+}
+
 public class ButtonScript : MonoBehaviour
 {
     [Header("Tunebale paramaters")]
@@ -17,12 +22,28 @@ public class ButtonScript : MonoBehaviour
     [Header("References")]
     [SerializeField] private AudioResource sound;
 
+    public string TriggeredContext = "";
+    public bool PlayerOnlyButton = false;
+
     //buytton press
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (PlayerOnlyButton)
+        {
+            if (!collision.gameObject.TryGetComponent<IPlayer>(out var player))
+            {
+                return;
+            }
+        }
         foreach (GameObject linkedObject in linkedObjects)
         {
             MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
+
+            if (linkedObject.TryGetComponent<ITriggered>(out var triggeredInterface))
+            {
+                triggeredInterface.OnTriggered(TriggeredContext);
+                continue;
+            }
 
             if (mps != null)
                 mps.isActive = !mps.isActive;
