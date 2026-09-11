@@ -5884,6 +5884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundObject: {fileID: 1947220708821526361, guid: c892eef558b3bfd408a79fbdff8d4838, type: 3}
+  musicSource: {fileID: 0}
 --- !u!1 &1392958931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1480275520255299914, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
@@ -6047,7 +6048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!19719996 &1563788480
 TilemapCollider2D:
   m_ObjectHideFlags: 0
