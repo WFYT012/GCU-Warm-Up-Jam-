@@ -5884,7 +5884,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundObject: {fileID: 1947220708821526361, guid: c892eef558b3bfd408a79fbdff8d4838, type: 3}
-  musicSource: {fileID: 0}
 --- !u!1 &1392958931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1480275520255299914, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
@@ -8873,7 +8872,7 @@ PrefabInstance:
       objectReference: {fileID: 1392958931}
     - target: {fileID: 7192489860530481, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: nextLevelName
-      value: Level1
+      value: Level7
       objectReference: {fileID: 0}
     - target: {fileID: 819421212710465171, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_IsActive
