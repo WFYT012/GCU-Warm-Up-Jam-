@@ -9,23 +9,32 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 26b1f8fb8e814c64f94b61dd78ac9b82
   - enabled: 1
-    path: Assets/Scenes/Tommy.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/IntroCutScene.unity
+    guid: 03a7b77855cb5dc48b5a2dcbb04e171f
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 51deb8db361a37343b77ce164d775f00
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: c14ba2a475038b24dae3a1d798667839
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
-    guid: 1cdfdecec1215ed4381bed1c277d6a44
-  - enabled: 1
-    path: Assets/Scenes/IntroCutScene.unity
-    guid: 03a7b77855cb5dc48b5a2dcbb04e171f
-  - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: bb954e91a2c08aa44a1eec7a4f89a392
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 51deb8db361a37343b77ce164d775f00
+    path: Assets/Scenes/Level4.unity
+    guid: 1cdfdecec1215ed4381bed1c277d6a44
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 17352f8272e57cb4c96f21df9774c843
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: a2fd781b05f73194298248f387480cd0
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: 388c595d027e25e4aa21fced8b4a5f92
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 5f08c3431cc8c2a4496d93e7a5eb814b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
