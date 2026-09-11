@@ -101,6 +101,11 @@ public class CompletionManager : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         if (!GameComplete)
         {
             return;
