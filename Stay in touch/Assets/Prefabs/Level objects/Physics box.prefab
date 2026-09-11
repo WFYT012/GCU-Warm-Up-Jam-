@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6041829790289402471}
   - component: {fileID: 7774905775109533252}
   - component: {fileID: 7161881260310848166}
-  - component: {fileID: 5150939769613348232}
   - component: {fileID: 8454341572177740279}
+  - component: {fileID: 7052718774575443576}
   m_Layer: 3
   m_Name: Physics box
   m_TagString: Untagged
@@ -117,8 +117,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5150939769613348232
-BoxCollider2D:
+--- !u!114 &8454341572177740279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068721331337560992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a8dcdace5503849ad4d0dcf931a8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistanceBeforeRespawn: 20
+--- !u!58 &7052718774575443576
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,27 +165,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &8454341572177740279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4068721331337560992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a8dcdace5503849ad4d0dcf931a8d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistanceBeforeRespawn: 20
+  m_Radius: 0.5

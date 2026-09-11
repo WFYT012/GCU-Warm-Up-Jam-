@@ -4624,6 +4624,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4548461924971079821, guid: 696aaa04224f9db439b77adfa54769d2, type: 3}
   m_PrefabInstance: {fileID: 767559141}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &774475087
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6675495168835834364, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_Name
+      value: Pressure plate Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982688177042708557, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632302617908701823, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
+      propertyPath: 'linkedObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1563788479}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 054cf1e078fcccd49870ad32baddd4ac, type: 3}
 --- !u!1001 &806522567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5168,71 +5229,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4548461924971079821, guid: 696aaa04224f9db439b77adfa54769d2, type: 3}
   m_PrefabInstance: {fileID: 1045434650}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1092324901
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4719290026977563680, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719290026977563680, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: 'linkedObjects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1563788479}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7644384575050624931, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
 --- !u!1001 &1166883603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9011,4 +9007,4 @@ SceneRoots:
   - {fileID: 5670464432149404077}
   - {fileID: 631208485}
   - {fileID: 1659785529}
-  - {fileID: 1092324901}
+  - {fileID: 774475087}
