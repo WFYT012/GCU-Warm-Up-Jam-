@@ -51,7 +51,7 @@ MonoBehaviour:
   isPlayer2: 0
   moveSpeed: 6.8
   jumpStrength: 12.5
-  airDecelleration: 5
+  airDecelleration: 8
   levelLayerMask:
     serializedVersion: 2
     m_Bits: 136
@@ -59,6 +59,7 @@ MonoBehaviour:
   animator: {fileID: 1586424451074445177}
   sprite: {fileID: 5392517007612878825}
   jumpSound: {fileID: 8300000, guid: 814f088f5f695b548a18fe4345b95697, type: 3}
+  deathSound: {fileID: 0}
 --- !u!50 &3357142692659564809
 Rigidbody2D:
   serializedVersion: 5
