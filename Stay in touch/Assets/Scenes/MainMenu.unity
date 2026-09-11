@@ -271,6 +271,7 @@ MonoBehaviour:
   credits: {fileID: 559612573}
   dt: {fileID: 1299511631}
   menuSound: {fileID: 8300000, guid: 38be4c315f798784d87f635a0ad62c33, type: 3}
+  teoVoiceSound: {fileID: 8300000, guid: 36c6dedb4887f1441ae97143789e36c7, type: 3}
 --- !u!1001 &182356016
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2360,7 +2360,7 @@ MonoBehaviour:
   CompletionCameraZoom: 2.5
   CompletionHoldingDistance: 3
   videoPlayer: {fileID: 1659785525}
-  winningSound: {fileID: 8300000, guid: 6b1a6b8148164714abce1aaaff057391, type: 3}
+  winningSound: {fileID: 8300000, guid: 90670a325a1aaa5419e52e673aef9a4c, type: 3}
   reloadManager: {fileID: 1347188814}
   completeSprite: {fileID: 8047917605120523972}
   animator: {fileID: 8047917605120523971}

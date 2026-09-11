@@ -15,6 +15,7 @@ public class MenuButtonsScript : MonoBehaviour
     public DeathTransition dt;
 
     [SerializeField] AudioResource menuSound;
+    [SerializeField] AudioResource teoVoiceSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,7 +50,8 @@ public class MenuButtonsScript : MonoBehaviour
     }
     IEnumerator ButtonIntro()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
+        SoundManagerScript.instance.PlaySoundClip(teoVoiceSound);
         playButton.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -89), 1.5f).SetEase(Ease.OutBounce);
         creditsButton.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -232), 1.5f).SetEase(Ease.OutBounce);
         quitButton.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -377), 1.5f).SetEase(Ease.OutBounce);
