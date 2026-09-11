@@ -32,11 +32,11 @@ public class SceneMusicLoader : MonoBehaviour
     {
         if (scene.name == "MainMenu")
         {
-            SoundManagerScript.instance.PlayMusic(menuMusic);
+            //SoundManagerScript.instance.PlayMusic(menuMusic);
         }
         else if(scene.name == "Level1")
         {
-            SoundManagerScript.instance.PlayMusic(levelMusic);
+            //SoundManagerScript.instance.PlayMusic(levelMusic);
         }
 
     }
