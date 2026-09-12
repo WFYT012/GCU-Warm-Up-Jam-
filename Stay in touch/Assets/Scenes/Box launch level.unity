@@ -4443,11 +4443,11 @@ PrefabInstance:
       objectReference: {fileID: 1282903731}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 13.499996
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.5
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 6220928894437336594, guid: d7b7aa14d6cfb354da88cbe401c6bf0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13975,11 +13975,31 @@ Tilemap:
   m_GameObject: {fileID: 1750474013}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 13, y: -10, z: 0}
+  - first: {x: 13, y: -12, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
       m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 13, y: -11, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 13, y: -10, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14289,7 +14309,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2b710a4a3e341b04d903d2a9dbd9f814, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: cfeded9235889504f9cf02d774b7677c, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4363780569a733347bcb8a44d7e591b7, type: 2}
@@ -14300,7 +14320,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 60631080, guid: 53a5896a3893a4943a1b95553bf5e8c1, type: 3}
-  - m_RefCount: 11
+  - m_RefCount: 13
     m_Data: {fileID: 6644876580269604869, guid: 53a5896a3893a4943a1b95553bf5e8c1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1442456416, guid: 53a5896a3893a4943a1b95553bf5e8c1, type: 3}
@@ -14309,7 +14329,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -1821583984, guid: 53a5896a3893a4943a1b95553bf5e8c1, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 31
+  - m_RefCount: 33
     m_Data:
       e00: 1
       e01: 0
@@ -14328,13 +14348,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 31
+  - m_RefCount: 33
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -5, y: -10, z: 0}
-  m_Size: {x: 19, y: 13, z: 1}
+  m_Origin: {x: -5, y: -12, z: 0}
+  m_Size: {x: 19, y: 15, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -15535,7 +15555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6092443251268383544, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7675989871037967313, guid: 9dbfac7587584494fbc3bb5693f9d97a, type: 3}
       propertyPath: m_Sprite

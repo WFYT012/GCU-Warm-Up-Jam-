@@ -51,7 +51,7 @@ public class CharacterScript : MonoBehaviour, IPlayer
         //-----vertical movement
         //ground check
         bool wasOnGround = onGround;
-        onGround = (Physics2D.OverlapCircle(groundCheck.position, 0.01f, levelLayerMask));
+        onGround = (Physics2D.OverlapCircle(groundCheck.position, 0.025f, levelLayerMask));
 
         //jumping
         if (jumpPressed && onGround)
