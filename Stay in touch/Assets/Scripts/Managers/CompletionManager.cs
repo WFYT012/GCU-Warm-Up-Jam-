@@ -55,6 +55,9 @@ public class CompletionManager : MonoBehaviour
 
     void Start()
 	{
+        videoPlayer.frame = 0;
+        videoPlayer.Stop();
+        videoPlayer.enabled = false;
         completionTImerCoroutine = StartCoroutine(CheckForCompletion());
 
         completeSprite.transform.localScale = Vector3.zero;
@@ -139,6 +142,7 @@ public class CompletionManager : MonoBehaviour
         }
         if (!VideoPlaying && time > 0.8f)
         {
+            videoPlayer.frame = 0;
         VideoPlaying = true;
         videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
 
@@ -147,6 +151,12 @@ public class CompletionManager : MonoBehaviour
         }
 
         //VideoPlayer player = Instantiate<VideoPlayer>();
+    }
+
+    void EndReached(VideoPlayer vp)
+    {
+        // Reset video to first frame
+        videoPlayer.frame = 0;
     }
 
 
