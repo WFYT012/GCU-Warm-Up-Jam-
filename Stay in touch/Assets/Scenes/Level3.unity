@@ -11748,7 +11748,7 @@ VideoPlayer:
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
-  m_Url: 
+  m_Url: file://C:/Users/Tommy/Documents/Local unity projects/GCU-Warm-Up-Jam-/Stay in touch/Assets/Resources/dapanimation.mp4
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0

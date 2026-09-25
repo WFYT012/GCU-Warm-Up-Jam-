@@ -156,6 +156,7 @@ public class CompletionManager : MonoBehaviour
 
             videoPlayer.enabled = true;
             videoPlayer.Play();
+            videoPlayer.gameObject.GetComponent<Animator>().SetTrigger("dap");
         }
 
     }

@@ -18,7 +18,7 @@ public class SceneTransitionScript : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 11)
+        if (SceneManager.GetActiveScene().buildIndex == 10)
             SceneManager.LoadScene(nextLevelName);
         else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
