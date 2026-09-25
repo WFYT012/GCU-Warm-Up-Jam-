@@ -16,7 +16,7 @@ public class WobbleScript : MonoBehaviour
     {
 
         float axis = (Mathf.Sin(Time.time * Speed * 0.25f) / 2) + 0.5f;
-        Debug.Log(axis);
+        //Debug.Log(axis);
 
 
         transform.eulerAngles = new Vector3(0.0f, Mathf.Sin(Time.time * Speed) * Strength * (1 - axis), Mathf.Sin(Time.time*Speed) * Strength * axis);

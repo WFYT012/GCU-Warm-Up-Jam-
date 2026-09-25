@@ -28,42 +28,44 @@ public class ButtonScript : MonoBehaviour
     //buytton press
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PlayerOnlyButton)
+        if (!CompletionManager.instance.getGameComplete())
         {
-            if (!collision.gameObject.TryGetComponent<IPlayer>(out var player))
+            if (PlayerOnlyButton)
             {
-                return;
+                if (!collision.gameObject.TryGetComponent<IPlayer>(out var player))
+                {
+                    return;
+                }
             }
-        }
-        foreach (GameObject linkedObject in linkedObjects)
-        {
-            MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
-
-            if (linkedObject.TryGetComponent<ITriggered>(out var triggeredInterface))
+            foreach (GameObject linkedObject in linkedObjects)
             {
-                triggeredInterface.OnTriggered(TriggeredContext);
-                continue;
+                MovingPlatformScript mps = linkedObject.GetComponent<MovingPlatformScript>();
+
+                if (linkedObject.TryGetComponent<ITriggered>(out var triggeredInterface))
+                {
+                    triggeredInterface.OnTriggered(TriggeredContext);
+                    continue;
+                }
+
+                if (mps != null)
+                    mps.isActive = !mps.isActive;
+                else
+                    linkedObject.SetActive(!linkedObject.activeSelf);
             }
+            
+            SoundManagerScript.instance.PlaySoundClip(sound);
 
-            if (mps != null)
-                mps.isActive = !mps.isActive;
-            else
-                linkedObject.SetActive(!linkedObject.activeSelf);
+            if (type == buttonType.button)
+                Destroy(gameObject);
+            else if (type == buttonType.lever)
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
-
-        
-        SoundManagerScript.instance.PlaySoundClip(sound);
-
-        if (type == buttonType.button)
-            Destroy(gameObject);
-        else if (type == buttonType.lever)
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     //button de-press
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (type == buttonType.pressurePlate)
+        if (type == buttonType.pressurePlate && !CompletionManager.instance.getGameComplete())
         {
             foreach (GameObject linkedObject in linkedObjects)
             {

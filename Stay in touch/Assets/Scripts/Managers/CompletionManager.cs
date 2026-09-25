@@ -11,6 +11,8 @@ using UnityEngine.Video;
 //[RequireComponent(typeof(Animator))]
 public class CompletionManager : MonoBehaviour
 {
+    public static CompletionManager instance;
+
 	public Camera SceneCamera;
 	public Transform Player1;
 	public Transform Player2;
@@ -52,6 +54,16 @@ public class CompletionManager : MonoBehaviour
     public GameObject completeSprite;
 
     public Animator animator;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    public bool getGameComplete()
+    {
+        return GameComplete;
+    }
 
     void Start()
 	{
@@ -122,7 +134,7 @@ public class CompletionManager : MonoBehaviour
         float progress = EaseInOutQuint(time);
 
 
-        Debug.Log("Progress: " + progress);
+        //Debug.Log("Progress: " + progress);
 
         SceneCamera.orthographicSize = Mathf.Lerp(InitialCameraZoom, CompletionCameraZoom, progress);
         transform.eulerAngles = new Vector3(0.0f, 0.0f, Mathf.Lerp(0, -10.0f, progress));
@@ -131,10 +143,6 @@ public class CompletionManager : MonoBehaviour
         Player1.position = Vector3.Lerp(player1StartPosition, player1TargetPosition, progress);
         Player2.position = Vector3.Lerp(player2StartPosition, player2TargetPosition, progress);
 
-        //if (progress >= 1)
-        //{
-        //    GameComplete = false;
-        //}
         if (!AudioPlaying && time > 0.5f)
         {
             AudioPlaying = true;
@@ -143,14 +151,13 @@ public class CompletionManager : MonoBehaviour
         if (!VideoPlaying && time > 0.8f)
         {
             videoPlayer.frame = 0;
-        VideoPlaying = true;
-        videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
+            VideoPlaying = true;
+            videoPlayer.transform.position = new Vector3(cameraTargetPosition.x, cameraTargetPosition.y, 0.0f);
 
-        videoPlayer.enabled = true;
-        videoPlayer.Play();
+            videoPlayer.enabled = true;
+            videoPlayer.Play();
         }
 
-        //VideoPlayer player = Instantiate<VideoPlayer>();
     }
 
     void EndReached(VideoPlayer vp)
